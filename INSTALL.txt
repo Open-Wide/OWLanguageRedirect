@@ -1,0 +1,81 @@
+-------------------------
+owLanguageRedirect :
+	v 0.1 beta
+-------------------------
+
+owLanguageRedirect detects the browser language, and redirects the user request to the user favorite language.
+
+If the user switch in another language, his preference is saved in the cookie.
+
+When the current siteaccess language is different of user language, user is redirected to the siteaccess corresponding to the user language.
+
+------------------------------------------------------------------------------------------------------------
+
+owLanguageRedirect détecte la langue par défaut du navigateur et redirige l'utilisateur vers sa langue préférée.
+
+S'il change de langue, un cookie est créé pour stocker sa langue de préférence.
+
+Lorsque la langue du siteaccess en cours est différente de la langue de l'utilisateur, celui-ci est automatiquement redirigé vers le siteaccess correspondant à sa langue préférée.
+
+
+
+
+
+-------------------------
+Installation instructions
+-------------------------
+
+1) If it does not exist, create a directory named "extension" in the base ezpublish directory.
+
+
+2) Unpack the ZIP file and copy the directory "owlanguageredirect" to the extension directory.
+
+
+
+3) Activate extension :
+---------------------------------
+Add the following to your settings/override/site.ini.append.php file:
+[ExtensionSettings]
+ActiveExtensions[]=owlanguageredirect
+
+	OR
+
+In administrator user interface, click 'setup' tab->'extensions' menu, select 'owlanguageredirect', click button 'Apply Changes'
+
+
+
+4) Regenerate autoloads :
+---------------------------------
+In administrator user interface, click 'setup' tab->'extensions' menu, click button 'Regenerate autoload arrays for extensions'
+
+	OR
+	
+in eZ Publish installation folder, run "php bin/php/ezpgenerateautoloads.php -e"
+
+
+
+5) Clear cache
+---------------------------------
+Clear INI and template caches. (from admin 'Setup' tab or commandline)
+
+
+
+-------------------------
+Usage
+-------------------------
+
+ - Add the "LanguageRedirect" settings in your site.ini
+ 
+
+ - Write this on the pagelayout.tpl first line :
+{def $headerRedirect=languageRedirect()}
+
+
+
+Hope you find it useful! 
+
+Simon Boyer
+
+--------------------------------------------------
+The mandatory disclaimer: use at your own risk!
+--------------------------------------------------
