@@ -1,14 +1,14 @@
 <?php
 
-class owlanguageredirect
+class owLanguageRedirectOperators
 {
     /*!
      Constructor
     */
-    function owlanguageredirect()
+    function owLanguageRedirectOperators()
     {
         $this->Operators = array( 
-									'languageRedirect'
+									'owLanguageRedirect'
         );
     }
 
@@ -38,7 +38,7 @@ class owlanguageredirect
     {
 
 		return array( 																  
-						'languageRedirect' => array( )
+						'owLanguageRedirect' => array( )
 						
 				  );
     }
@@ -53,9 +53,9 @@ class owlanguageredirect
         switch ( $operatorName )
         {
             
-			case 'languageRedirect':
-				require_once("languageRedirect.php");
-				$operatorValue = languageRedirect();
+			case 'owLanguageRedirect':
+				$owLanguageRedirect = new owLanguageRedirect();
+				$operatorValue = $owLanguageRedirect->redirect();
 			break;
 			
 			

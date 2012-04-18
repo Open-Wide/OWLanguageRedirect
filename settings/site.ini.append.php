@@ -51,7 +51,7 @@ ExtensionAutoloadPath[]=owlanguageredirect
 #LanguageRedirect[en]=site1_en
 
 
-# Override ezpLanguageSwitcher to save user language (may be different of browser_locale)
+# Override ezpLanguageSwitcher to save favorite user language (may be different of browser_locale)
 # If you want define a custom class, please modify classes/owlanguageredirectswitcher.php (name of extended class at line 3)
 LanguageSwitcherClass=owLanguageRedirectSwitcher
 
