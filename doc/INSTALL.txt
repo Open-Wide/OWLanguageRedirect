@@ -1,11 +1,11 @@
 -------------------------
 owLanguageRedirect :
-	v 0.1 beta
+	v 1.0
 -------------------------
 
 owLanguageRedirect detects the browser language, and redirects the user request to the user favorite language.
 
-If the user switch in another language, his preference is saved in the cookie.
+If the user switches in another language, his preference is saved in a cookie.
 
 When the current siteaccess language is different of user language, user is redirected to the siteaccess corresponding to the user language.
 
@@ -64,11 +64,11 @@ Clear INI and template caches. (from admin 'Setup' tab or commandline)
 Usage
 -------------------------
 
- - Add the "LanguageRedirect" settings in your site.ini
+ - Add the "LanguageRedirect" settings in your site.ini (see site.ini.append.php for details)
  
 
  - Write this on the pagelayout.tpl first line :
-{def $headerRedirect=languageRedirect()}
+{def $headerRedirect=owLanguageRedirect()}
 
 
 

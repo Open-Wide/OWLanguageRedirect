@@ -5,10 +5,10 @@
 $eZTemplateOperatorArray = array();
 
 $eZTemplateOperatorArray[] =
-  array( 'script' => 'extension/owlanguageredirect/autoloads/owlanguageredirect.php',
-         'class' => 'owlanguageredirect',
+  array( 'script' => 'extension/owlanguageredirect/autoloads/owlanguageredirectoperators.php',
+         'class' => 'owLanguageRedirectOperators',
          'operator_names' => array( 
-									'languageRedirect'
+									'owLanguageRedirect'
 									),
 		 );
 
