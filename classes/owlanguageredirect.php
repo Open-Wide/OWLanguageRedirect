@@ -57,6 +57,13 @@ class owLanguageRedirect {
         		
         		// Redirect
         		$http = eZHTTPTool::instance();
+        		
+        		// Add optional HTTP header before redirect, to avoid caching
+        		$languageRedirectHeaderArray = $ini->variable('RegionalSettings','LanguageRedirectHeader');
+        		foreach ( $languageRedirectHeaderArray as $key => $value ) {
+        			eZHTTPTool::headerVariable( $key, $value );
+        		}
+        		
         		$http->redirect( $redirect );
         		
         		return true;
